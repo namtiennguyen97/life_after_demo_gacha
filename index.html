@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/cdn/jquery.min.js"></script>
+</head>
+<body>
+<img id="a">
+<button onclick="roll(1)">Roll x1</button>
+<button onclick="roll(5)">Roll x5</button>
+
+<script src="js/gacha.js"></script>
+<script src="js/itemInfo.js"></script>
+<script src="js/defineItem.js"></script>
+<script>
+  //set number of sun
+// $('#a').attr('src', shard.getImageUrl())
+const rewardList = [
+    shard, goldBar, nano1, nano2, geneCapsule
+]
+
+  function roll(time = 1){
+    for (let i = 0 ; i < time ; i++){
+        let randomRoll = Math.floor(Math.random() * rewardList.length)
+        console.log(rewardList[randomRoll])
+    }
+  }
+</script>
+
+</body>
+</html>

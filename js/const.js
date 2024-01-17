@@ -1,0 +1,1 @@
+const GOLD_NAME = 'Gold'
